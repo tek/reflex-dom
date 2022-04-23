@@ -72,10 +72,10 @@ library
     build-tools: hsc2hs
   build-depends:
     base >= 4.7,
-    bytestring == 0.10.*,
+    bytestring >= 0.10,
     reflex >= 0.8,
     reflex-dom-core >= 0.6.1.0,
-    text == 1.2.*
+    text >= 1.2
   if !impl(ghcjs)
     if flag(use-warp)
       build-depends:
