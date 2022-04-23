@@ -64,7 +64,7 @@ library
       aeson >= 1.4,
       android-activity == 0.1.*,
       data-default == 0.7.*,
-      jsaddle >= 0.9.6 && < 0.10
+      jsaddle >= 0.9.6
     c-sources: cbits/MainWidget.c
     include-dirs: cbits/include
     install-includes: MainWidget.h
@@ -80,26 +80,26 @@ library
     if flag(use-warp)
       build-depends:
         jsaddle >= 0.9.6,
-        jsaddle-warp >= 0.9.6 && < 0.10
+        jsaddle-warp >= 0.9.6
     else
       if os(osx) || os(ios)
         build-depends:
           data-default == 0.7.*,
           jsaddle >= 0.9.6,
-          jsaddle-wkwebview >= 0.9.6 && < 0.10
+          jsaddle-wkwebview >= 0.9.6
       else
         if flag(wasm32)
           build-depends:
             jsaddle >= 0.9.6,
-            jsaddle-wasm >= 0.1 && < 0.2
+            jsaddle-wasm >= 0.1
         else
           if flag(webkit2gtk)
             build-depends:
-              jsaddle-webkit2gtk >= 0.9.6 && < 0.10
+              jsaddle-webkit2gtk >= 0.9.6
           else
             if !os(android)
               build-depends:
-                jsaddle-webkit2gtk >= 0.9.6 && < 0.10
+                jsaddle-webkit2gtk >= 0.9.6
 
   exposed-modules:
     Reflex.Dom
